@@ -65,6 +65,10 @@ header nav ul li a img{
     padding: 2px;
     width: max-content;
 }
+.nav-profile a{
+    text-decoration: none;
+    color: #ffffff;
+}
 .nav-profile img{
     width: 2rem;
     height: 2rem;
