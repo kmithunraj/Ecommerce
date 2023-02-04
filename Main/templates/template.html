@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="{% static '' %}" type="image/x-icon">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+</head>
+<body>
+
+    <header>
+        
+        <h1><img src="{% static 'img/logo.png' %}" alt=""></h1>
+
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}"><img src="{% static 'img/home.png' %}" alt=""> Home</a></li>
+                <li><a href="{% url 'wishlist' %}"><img src="{% static 'img/wishlist.png' %}" alt=""> Wish List</a></li>
+                <li><a href="{% url 'cart' %}"><img src="{% static 'img/cart.png' %}" alt=""> Cart</a></li>
+                <li><a href="{% url 'orders' %}"><img src="{% static 'img/orders.png' %}" alt=""> Orders</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-profile">
+            <div class="nav-profile-ring">
+                <img src="{% static 'img/profile.png' %}" alt="">
+                <div>Mithun Raj</div>
+                <button onclick="">&#9660;</button>
+            </div>
+        </div>       
+
+    </header>
+
+    <div id="mobile_header" class="mobile_header">
+        
+        <button class="menubar" onclick="menuBar()">
+
+            <div></div>
+            <div></div>
+            <div></div>
+
+        </button>
+
+        <h1 id="logo"><img src="{% static 'img/logo.png' %}" alt=""></h1>
+
+        <button id="searchbtn" class="searchbtn" onclick="toggleSearchBar()"><img src="{% static 'img/search.png' %}" alt="Search"></button>      
+
+       
+
+    </div>
+
+    <div class="navigation" id="navigation" style="display: none;">
+        <ul>
+            <li><img src="{% static 'img/logo.png' %}" alt="logo"></li>
+            <div class="nav-profile">
+                <div class="nav-profile-ring">
+                    <img src="{% static 'img/profile.png' %}" alt="">
+                    <div>Mithun Raj</div>
+                    <a href="{% url 'profile' %}"><button>></button></a>
+                </div>
+            </div>
+            <br>
+            <li><a href="{% url 'home' %}"><img src="{% static 'img/home.png' %}" alt="home"> Home</a></li>
+            <li><a href="{% url 'wishlist' %}"><img src="{% static 'img/wishlist.png' %}" alt="wishlist"> Wish List</a></li>
+            <li><a href="{% url 'cart' %}"><img src="{% static 'img/cart.png' %}" alt="cart"> Cart</a></li>
+            <li><a href="{% url 'orders' %}"><img src="{% static 'img/orders.png' %}" alt="orders"> Orders</a></li>
+            <li class="logoutbtn"><a href="{% url 'logout' %}"><img src="{% static 'img/logout.png' %}" alt="logout"> Logout</a></li>
+        </ul>
+    </div>
+
+    <div id="searchbar" class="searchbar" style="display: none;">
+        <form action=""><input id="search" name="search" placeholder="Search for products..." type="text"> &nbsp; <button type="submit"><img src="{% static 'img/search.png' %}"></button></form>
+    </div>
+
+    <div id="blur"></div>
+
+    {% block content %}
+
+    {% endblock %}
+    
+    <footer>
+        <p>© 2021 All Rights Reserved</p>
+    </footer>
+
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
