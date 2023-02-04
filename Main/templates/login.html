@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="{% static 'img/icon.png' %}" type="image/x-icon">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+</head>
+<body>
+
+    <div class="login_page">
+
+        {% if messages %}
+        
+        {% for message in messages %}
+
+        <div id="msg">  
+            <p>{{message}}</p>
+        </div>
+
+        {% endfor %}
+        
+        {% endif %}
+
+        <div class="login_wrapper">
+
+            <img src="https://i.ibb.co/104BxrW/logo.png" alt="">
+
+            <div class="login_form">
+
+                <form  method="post" id="login-form" action="{% url 'login' %}">
+
+                    {% csrf_token %}
+
+                    <label for="username">Email</label>
+                    <br>
+                    <input type="text" name="username" id="username" required>
+
+                    <br>
+                    <br>
+
+                    <label for="username">Password</label>
+                    <br>
+                    <input type="password" name="password" id="username" required>
+                    <br>
+                    <a href="#">Forgot Password?</a>
+
+                    <br>
+                    <br>
+
+                    <input type="submit" value="Login">
+
+                </form>
+
+                <p>Don't have a account? <a href="{% url 'signup' %}">Signup</a></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

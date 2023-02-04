@@ -120,6 +120,67 @@ footer{
 
 
 
+.login_page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.login_page .login_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login_page .login_wrapper img{
+    width: 150px;
+    height: auto;
+}
+.login_page .login_wrapper .login_form{
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+}
+.login_page .login_wrapper .login_form form{
+    font-size: 22px;
+    width: 260px;
+    padding: 10px;
+}
+.login_page .login_wrapper .login_form form input[type=text]{
+    width: 250px;
+    outline: none;
+    font-size: 18px;
+    padding: 4px;
+}
+.login_page .login_wrapper .login_form form input[type=password]{
+    width: 250px;
+    padding: 4px;
+    outline: none;
+    font-size: 18px;
+}
+.login_page .login_wrapper .login_form form a{
+    font-size: 1rem;
+}
+.login_page .login_wrapper .login_form form input[type=submit]{
+    width: 100%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: #00ad42;
+    color: #f9f9f9;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+}
+.login_page .login_wrapper .login_form p{
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+
 
 
 

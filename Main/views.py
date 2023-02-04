@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 
@@ -106,9 +106,7 @@ def signup(request):
 # --------------------------- Logout page of the website ---------------------------
 
 def logout(request):
-    
-    return render(request, 'logout.html')
-
+    return redirect('index')
 
 
 
