@@ -15,7 +15,7 @@
 
 </head>
 <body>
-
+    <div id="main">
         <div id="mobile_header" class="mobile_header">
         
             <button class="menubar" onclick="menuBar()">
@@ -31,6 +31,7 @@
             <button id="searchbtn" class="searchbtn" onclick="toggleSearchBar()"><img src="{% static 'img/search.png' %}" alt="Search"></button>      
     
         </div>
+
         <div class="navigation" id="navigation" style="display: none;">
             <ul>
                 <li><img src="{% static 'img/logo.png' %}" alt="logo"></li>
@@ -65,6 +66,8 @@
         <footer id="footer">
             <p>© 2023 All Rights Reserved</p>
         <footer>
+
+    </div>
 
     <script src="{% static 'js/script.js' %}"></script>
     

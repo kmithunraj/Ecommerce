@@ -42,3 +42,5 @@ document.addEventListener('mouseup', function(e) {
         searchbar.style.display = "none";
     }
 });
+
+

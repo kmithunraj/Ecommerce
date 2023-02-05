@@ -4,10 +4,14 @@
     --pri-font-color: #f5f5f5;
     --sec-font-color: #f5f5f5;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     font-family: 'Open Sans', sans-serif;
     margin: 0 auto;
-    padding: 0;
     overflow-x: hidden;
     background-color: #0D1117;
 }
@@ -181,41 +185,27 @@ header nav ul li a img{
 
 @media only screen and (max-width: 600px) {
 
+    :root{
+        --pri-color: #0D1117;
+        --sec-color: ;
+        --pri-font-color: #f5f5f5;
+        --sec-font-color: #f5f5f5;
+    }
+
     body{
-        font-family: 'Open Sans', sans-serif;
-        margin: 0 auto;
-        padding: 0;
-        overflow-x: hidden;
-        background-color: #0D1117;
+        height: 100%;
+        z-index: 1;
+    }
+    main{
+        height: 100vw;
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
     }
-    #container {
-        flex: 1;
-      }
     header{
         display: none;
     }
-    .mobile_header{
-        z-index: 888;
-    }
-    .mobile_header .menubar{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        width: 30px;
-    }
-    .mobile_header .menubar div{
-        width: 30px;
-        height: 4px;
-        background-color: #ffffff;
-        margin: 2px 0;
-        border-radius: 3px;
-    }
-    .mobile_header{
+    .mobile_header {
+        height: 70px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -224,9 +214,15 @@ header nav ul li a img{
         padding: 10px;
         text-align: center;
         box-shadow: 0px 1px 10px #000000;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 3;
     }
     .mobile_header h1{
-        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .mobile_header h1 img{
         width: 100px;
@@ -244,7 +240,27 @@ header nav ul li a img{
     .mobile_header button img{
         width: 25px;
     }
-    .navigation{
+    .mobile_header .menubar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        width: 30px;
+    }
+    .mobile_header .menubar div{
+        width: 30px;
+        height: 4px;
+        background-color: #ffffff;
+        margin: 2px 0;
+        border-radius: 3px;
+    }
+    #container {
+        min-height: calc(100vh - 110px);
+        display: flex;
+        flex-direction: column;
+      }
+      .navigation{
         display: none;
         position: fixed;
         top: 0;
@@ -253,7 +269,12 @@ header nav ul li a img{
         height: 100vh;
         background-color: var(--pri-color);
         color: var(--pri-font-color);
-        z-index: 999;
+        z-index: 7;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10vw;
     }
     .navigation ul{
         list-style: none;
@@ -333,18 +354,13 @@ header nav ul li a img{
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 998;
+        z-index: 5;
         opacity: 0.9;
         filter: blur(5px);
     }
-    .container{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        margin: 0 auto;
+    #container{
+        min-height: calc(100vh - 120px);
+        display: block;
     }
     .searchbar{
         width: 100%;
@@ -389,12 +405,27 @@ header nav ul li a img{
     .searchbar form img{
         width: 20px;
     }
-    footer{
+    footer p{
+        width: 100vw;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         background-color: var(--pri-color);
         color: var(--pri-font-color);
-        text-align: center;
         box-shadow: 0px -1px 10px #000000;
     }
+
+
+    /* ------------------------- HOME ------------------------- */
+
+    
+      
+      
+      
+      
+
     
   }
   
