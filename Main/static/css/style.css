@@ -104,16 +104,6 @@ header nav ul li a img{
     cursor: pointer;
 }
 
-footer{
-    background-color: var(--pri-color);
-    color: var(--pri-font-color);
-    padding: 1rem;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0px -1px 10px #000000;
-    position: fixed;
-    bottom: 0;
-}
 
 
 
@@ -197,7 +187,13 @@ footer{
         padding: 0;
         overflow-x: hidden;
         background-color: #0D1117;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
+    #container {
+        flex: 1;
+      }
     header{
         display: none;
     }
@@ -396,12 +392,8 @@ footer{
     footer{
         background-color: var(--pri-color);
         color: var(--pri-font-color);
-        padding: 10px;
-        min-width: 100vw;
         text-align: center;
         box-shadow: 0px -1px 10px #000000;
-        position: fixed;
-        bottom: 0;
     }
     
   }
