@@ -417,14 +417,111 @@ header nav ul li a img{
     }
 
 
-    /* ------------------------- HOME ------------------------- */
-
-    
-
-      
-      
+ 
       
 
-    
+    .profile_wrapper{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+    }
+    .profile-header{
+        background-color: #ffffff;
+        border-radius: 20px;
+        padding: 2px;
+        width: max-content;
+    }
+    .profile-header img{
+        width: 40px;
+        border-radius: 50%;
+        margin-right: 5px;
+        background-color: antiquewhite;
+    }
+    .profile-header div{
+        font-size: 30px;
+        font-weight: 400;
+        color: #000000;
+    }
+    .profile-header .profile-header-ring{
+        border: 1px solid black; 
+        width: max-content; 
+        display:flex; 
+        border-radius:20px; 
+        padding:5px; 
+        align-items: center;
+    }
+    .profile_wrapper label{
+        font-size: 20px;
+        color: #e3e1e1;
+    }
+    .profile_wrapper input[type="text"]{
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        font-size: 16px;
+        color: #000000;
+        background-color: #e3e1e1;
+    }
+    .profile_wrapper textarea{
+        width: 100%;
+        height: 120px;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        font-size: 16px;
+        color: #000000;
+        background-color: #e3e1e1;
+        resize: none;
+    }
+    .profile_wrapper #profilesave{
+        width: 40%;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        font-size: 20px;
+        color: #e3e1e1;
+        background-color: green;
+        cursor: pointer;
+    }
+    .profile_wrapper #profilecancel{
+        width: 40%;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        font-size: 20px;
+        color: #e3e1e1;
+        background-color: rgb(191, 0, 0);
+        cursor: pointer;
+    }
+    .profile_wrapper button{
+        width: 40%;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        font-size: 20px;
+        color: #e3e1e1;
+        background-color: rgb(191, 0, 0);
+        cursor: pointer;
+    }
+    .profile_wrapper #resetpassword{
+        width: 50%;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        font-size: 20px;
+        color: #e3e1e1;
+        background-color: rgb(191, 169, 0);
+        cursor: pointer;
+    }
   }
   

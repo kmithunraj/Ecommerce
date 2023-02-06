@@ -43,6 +43,16 @@ def profile(request):
 
 
 
+# --------------------------- Reset password page of the website ---------------------------
+
+def resetpassword(request):
+        
+    return render(request, 'reset_password.html')
+
+
+
+
+
 # --------------------------- Home page of the website ----------------------------
 
 def home(request):

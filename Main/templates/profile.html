@@ -1,10 +1,69 @@
 {% extends "template.html" %}
 
+{% load static %}
+
 {% block title %}Profile{% endblock %}
 
 
 {% block content %}
 
+<div class="profile_wrapper">
+    
+    <div class="profile-header">
+        <div class="profile-header-ring">
+            <img src="{% static 'img/profile.png' %}" alt="">
+            <div>Profile</div>
+        </div>
+    </div>
 
+    <br>
+    
+    <form action="{% url 'profile' %}" method="post">
+
+        {% csrf_token %}
+
+        <label for="name">Name</label>
+        <br>
+        <input type="text" name="name" value="{{ user.name }}" disabled required>
+        <br>
+        <br>
+        <label for="email">Email</label>
+        <br>
+        <input type="text" name="email" value="{{ user.email }}" disabled required>
+        <br>
+        <br>
+        <label for="phone">Phone</label>
+        <br>
+        <input type="text" name="phone" value="{{ user.phone }}" disabled required>
+        <br>
+        <br>
+        <label for="address">Address</label>
+        <br>
+        <textarea name="address" disabled required>{{ user.address }}</textarea>
+        <br>
+        <br>
+        <label for="city">City</label>
+        <br>
+        <input type="text" name="city" value="{{ user.city }}" disabled required>
+        <br>
+        <br>
+        <label for="state">State</label>
+        <br>
+        <input type="text" name="state" value="{{ user.state }}" disabled required>
+        <br>
+        <br>
+        <label for="pincode">Pincode</label>
+        <br>
+        <input type="text" name="pincode" value="{{ user.pincode }}" disabled required>
+        <br>
+        <br>
+        <input id="profilesave" style="display:none;" type="submit" value="Save" disabled>
+    </form>
+    <br>
+    <a style="text-decoration:none;" href="{% url 'profile' %}"><button id="profilecancel" style="display:none;">Cancel</button></a>
+    <button id="profileedit" onclick="profileEnable()">Edit</button>
+    <br>
+    <a id="resetpassword" style="display:block;" href="{% url 'reset password' %}">Reset Password</a>
+</div>
 
 {% endblock %}

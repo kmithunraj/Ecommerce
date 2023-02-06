@@ -44,3 +44,12 @@ document.addEventListener('mouseup', function(e) {
 });
 
 
+
+function profileEnable() {
+document.querySelectorAll('input[disabled]').forEach(input => input.removeAttribute('disabled'));
+document.querySelector("textarea[name='address']").disabled = false;
+document.getElementById("profilesave").style.display = "block";
+document.getElementById("profilecancel").style.display = "block";
+document.getElementById("profileedit").style.display = "none";
+document.getElementById("resetpassword").style.display = "none";
+}
