@@ -355,8 +355,7 @@ header nav ul li a img{
         top: 0;
         left: 0;
         z-index: 5;
-        opacity: 0.9;
-        filter: blur(5px);
+        opacity: 0.85;
     }
     #container{
         min-height: calc(100vh - 120px);
@@ -421,7 +420,7 @@ header nav ul li a img{
     /* ------------------------- HOME ------------------------- */
 
     
-      
+
       
       
       
