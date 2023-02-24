@@ -7,6 +7,18 @@
 
 {% block content %}
 
-
+<div class="slideshow-container">
+    <div class="slides">
+      <div class="slide">
+        <a href="{% url 'profile' %}"><img src="{% static 'img/banner1.png' %}" alt="Slide 1"></a>
+      </div>
+      <div class="slide">
+        <a href="{% url 'cart' %}"><img src="{% static 'img/banner2.png' %}" alt="Slide 2"></a>
+      </div>
+      <div class="slide">
+        <a href="{% url 'wishlist' %}"><img src="{% static 'img/banner3.png' %}" alt="Slide 3"></a>
+      </div>
+    </div>
+  </div>
 
 {% endblock %}

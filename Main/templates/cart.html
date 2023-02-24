@@ -1,12 +1,37 @@
 {% extends "template.html" %}
 
+{% load static %}
+
 {% block title %}Cart{% endblock %}
 
 
 {% block content %}
 
 
-
+<div class="cart_wrapper">
+    <div class="cart_items">
+            <div class="cart_item">
+                <div class="cart_item_image">
+                    <img src="{% static 'img/banner2.png' %}" alt="">
+                </div>
+                <div class="cart_item_details">
+                    <div class="cart_item_name">
+                        <h2>Boat Airdopes 131</h2>
+                    </div>
+                    <div class="cart_item_quantity">
+                        <p>-</p><h3>1</h3><p>+</p>
+                    </div>
+                    <div class="cart_item_price">
+                        <h2>Rs 300</h2>
+                    </div>
+                    <br>
+                    <div class="cart_item_remove">
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
 
 
 {% endblock %}
