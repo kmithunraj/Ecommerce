@@ -66,13 +66,21 @@ function showSlides(n) {
 
 var prevButton = document.querySelector(".prev");
 prevButton.addEventListener("click", function() {
-  showSlides(slideIndex -= 1);
+  slideIndex -= 1;
+  clearTimeout(slideTimer);
+  showSlides(slideIndex);
+  slideTimer = setTimeout(function() {showSlides(slideIndex += 1)}, 3000);
 });
 
 var nextButton = document.querySelector(".next");
 nextButton.addEventListener("click", function() {
-  showSlides(slideIndex += 1);
+  slideIndex += 1;
+  clearTimeout(slideTimer);
+  showSlides(slideIndex);
+  slideTimer = setTimeout(function() {showSlides(slideIndex += 1)}, 3000);
 });
+
+var slideTimer = setTimeout(function() {showSlides(slideIndex += 1)}, 3000);
 
 
 
