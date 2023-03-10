@@ -50,6 +50,9 @@ document.addEventListener('mouseup', function(e) {
 
 
 
+
+
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -64,26 +67,21 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "flex";  
 }
 
-var prevButton = document.querySelector(".prev");
+var prevButton = document.querySelector("#prevbtn");
 prevButton.addEventListener("click", function() {
-  slideIndex -= 1;
+  showSlides(slideIndex -= 1);
   clearTimeout(slideTimer);
-  showSlides(slideIndex);
   slideTimer = setTimeout(function() {showSlides(slideIndex += 1)}, 3000);
 });
 
-var nextButton = document.querySelector(".next");
+var nextButton = document.querySelector("#nextbtn");
 nextButton.addEventListener("click", function() {
-  slideIndex += 1;
+  showSlides(slideIndex += 1);
   clearTimeout(slideTimer);
-  showSlides(slideIndex);
   slideTimer = setTimeout(function() {showSlides(slideIndex += 1)}, 3000);
 });
 
 var slideTimer = setTimeout(function() {showSlides(slideIndex += 1)}, 3000);
-
-
-
 
 
 
