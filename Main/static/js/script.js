@@ -43,20 +43,53 @@ document.addEventListener('mouseup', function(e) {
     }
 });
 
-var slideIndex = 0;
-showSlides();
 
-function showSlides() {
+
+
+
+
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("slide");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+      slides[i].style.display = "none";  
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "flex";
-  setTimeout(showSlides, 5000);
+  slides[slideIndex-1].style.display = "flex";  
 }
+
+var prevButton = document.querySelector(".prev");
+prevButton.addEventListener("click", function() {
+  showSlides(slideIndex -= 1);
+});
+
+var nextButton = document.querySelector(".next");
+nextButton.addEventListener("click", function() {
+  showSlides(slideIndex += 1);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function profileEnable() {
 document.querySelectorAll('input[disabled]').forEach(input => input.removeAttribute('disabled'));
@@ -66,3 +99,6 @@ document.getElementById("profilecancel").style.display = "block";
 document.getElementById("profileedit").style.display = "none";
 document.getElementById("resetpassword").style.display = "none";
 }
+
+
+

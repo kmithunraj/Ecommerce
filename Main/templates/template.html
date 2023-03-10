@@ -16,6 +16,34 @@
 </head>
 <body>
     <div id="main">
+
+
+
+        <header>
+
+            <h1><img src="{% static 'img/logo.png' %}" alt=""></h1>
+
+            <nav>
+                <ul>
+                <li><a href="{% url 'home' %}"><img src="{% static 'img/home.png' %}" alt="home"> Home</a></li>
+                <li><a href="{% url 'wishlist' %}"><img src="{% static 'img/wishlist.png' %}" alt="wishlist"> Wish List</a></li>
+                <li><a href="{% url 'cart' %}"><img src="{% static 'img/cart.png' %}" alt="cart"> Cart</a></li>
+                <li><a href="{% url 'orders' %}"><img src="{% static 'img/orders.png' %}" alt="orders"> Orders</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-profile">
+                <div class="nav-profile-ring">
+                    <img src="{% static 'img/profile.png' %}" alt="">
+                    <div>Mithun Raj</div>
+                    <a href="{% url 'profile' %}"><button>&#10095;</button></a>
+                </div>
+            </div>
+
+        </header>
+
+
+
         <div id="mobile_header" class="mobile_header">
         
             <button class="menubar" onclick="menuBar()">
@@ -39,7 +67,7 @@
                     <div class="nav-profile-ring">
                         <img src="{% static 'img/profile.png' %}" alt="">
                         <div>Mithun Raj</div>
-                        <a href="{% url 'profile' %}"><button>></button></a>
+                        <a href="{% url 'profile' %}"><button>&#10095;</button></a>
                     </div>
                 </div>
                 <br>

@@ -4,6 +4,9 @@
     --pri-font-color: #f5f5f5;
     --sec-font-color: #f5f5f5;
 }
+::-webkit-scrollbar {
+    display: none;
+}
 *{
     margin: 0;
     padding: 0;
@@ -15,7 +18,12 @@ body{
     overflow-x: hidden;
     background-color: #0D1117;
 }
+.mobile_header{
+    display: none;
+}
 header{
+    width: 100vw;
+    height: 100px;
     background-color: var(--pri-color);
     color: var(--pri-font-color);
     padding: 1rem;
@@ -107,6 +115,59 @@ header nav ul li a img{
     margin-left: 5px;
     cursor: pointer;
 }
+#container{
+    min-height: calc(100vh - 150px);
+}
+footer p{
+    width: 100vw;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--pri-color);
+        color: var(--pri-font-color);
+        box-shadow: 0px -1px 10px #000000;
+}
+
+
+
+.slideshow_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.slideshow_wrapper button{
+    margin: 20px;
+    padding: 15px;
+    font-size: 20px;
+    background-color: #141a20;
+    color: rgb(162, 163, 163);
+    border: none;
+    cursor: pointer;
+}
+
+.slideshow-container {
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+  
+.slides {
+    display: flex;
+}
+  
+.slide {
+    flex: 1;
+}
+  
+.slide img {
+    width: 50vw;
+    height: auto;
+}
+
 
 
 
@@ -441,6 +502,49 @@ header nav ul li a img{
       
       
       
+    .slideshow_wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    
+    .slideshow_wrapper button{
+        margin: 5px;
+        padding: 5px;
+        font-size: 17px;
+        background-color: #565758;
+        color: rgb(162, 163, 163);
+        border: none;
+        cursor: pointer;
+    }
+    #nextbtn{
+        position: absolute;
+        right: 0;
+        z-index: 2;
+    }
+    #prevbtn{
+        position: absolute;
+        left: 0;
+        z-index: 2;
+    }
+    
+    .slideshow-container {
+        max-width: 800px;
+        margin: auto;
+        position: relative;
+    }
+      
+    .slides {
+        display: flex;
+    }
+      
+
+      
+    
+
+
+
 
     .profile_wrapper{
         display: flex;
